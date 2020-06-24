@@ -9,6 +9,7 @@ jobs:
 # Mac and Linux use the same template with different matrixes
 - template: buildscripts/azure/azure-linux-macos.yml
   parameters:
+    pool: 'Azure Pipelines'
     name: Linux
     vmImage: ubuntu-16.04
     matrix:
