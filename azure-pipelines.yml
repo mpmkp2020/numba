@@ -118,8 +118,8 @@ jobs:
 
 - template: buildscripts/azure/azure-linux-macos.yml
   parameters:
-    name: abc
-    vmImage: Ubuntu-18.04.4
+    arch: arm64
+    qemu_arch: aarch64
     agent: AArch64_agent_01
     matrix:
       py37_np116_tbb:
