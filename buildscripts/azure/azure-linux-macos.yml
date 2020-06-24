@@ -6,6 +6,7 @@ parameters:
 jobs:
 - job: ${{ parameters.name }}
   pool: 
+    name: ${{ parameters.pool }}
     vmImage: ${{ parameters.vmImage }}
   strategy:
     matrix:
