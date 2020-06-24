@@ -115,3 +115,16 @@ jobs:
   parameters:
     name: Windows
     vmImage: vs2017-win2016
+
+- template: buildscripts/azure/azure-linux-macos.yml
+  parameters:
+    name: abc
+    vmImage: Ubuntu-18.04.4
+    agent: AArch64_agent_01
+    matrix:
+      py37_np116_tbb:
+        PYTHON: '3.7'
+        NUMPY: '1.16'
+        CONDA_ENV: travisci
+        TEST_THREADING: 'tbb'
+        TEST_START_INDEX: 2
