@@ -122,7 +122,6 @@ jobs:
     qemu_arch: aarch64
     agent: AArch64_agent_01
     matrix:
-      py37_np116_tbb:
         PYTHON: '3.7'
         NUMPY: '1.16'
         CONDA_ENV: travisci
