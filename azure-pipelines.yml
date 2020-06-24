@@ -5,6 +5,10 @@ variables:
   # Change the following along with adding new TEST_START_INDEX.
   TEST_COUNT: 18
 
+pool:
+  name: AArch64_agent
+  agent: AArch64_agent_01
+  
 jobs:
 # Mac and Linux use the same template with different matrixes
 - template: buildscripts/azure/azure-linux-macos.yml
