@@ -118,7 +118,7 @@ jobs:
 
 - template: buildscripts/azure/azure-linux-macos.yml
   parameters:
-    vm_image: 'ubuntu-latest'
+    vmImage: 'ubuntu-latest'
     arch_list: "AARCH64"
     qemu_arch: aarch64
     matrix:
