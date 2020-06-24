@@ -118,11 +118,13 @@ jobs:
 
 - template: buildscripts/azure/azure-linux-macos.yml
   parameters:
-    arch: arm64
-    qemu_arch: aarch64
+    pool: AArch64_agent
+    #arch: arm64
+    #qemu_arch: aarch64
     vmImage: 'ubuntu-latest'
     matrix:
       AArch64_agent_01:
+        pool: AArch64_agent
         PYTHON: '3.7'
         NUMPY: '1.16'
         CONDA_ENV: travisci
