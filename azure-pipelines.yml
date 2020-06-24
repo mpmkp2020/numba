@@ -120,8 +120,8 @@ jobs:
   parameters:
     arch: arm64
     qemu_arch: aarch64
-    agent: AArch64_agent_01
     matrix:
+      AArch64_agent_01:
         PYTHON: '3.7'
         NUMPY: '1.16'
         CONDA_ENV: travisci
