@@ -6,8 +6,8 @@ variables:
   TEST_COUNT: 18
 
 pool:
-  name: AArch64_agent
-  agent: AArch64_agent_01
+  name: 'AArch64_agent'
+  agent: 'AArch64_agent_01'
   
 jobs:
 # Mac and Linux use the same template with different matrixes
