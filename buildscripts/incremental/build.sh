@@ -13,8 +13,8 @@ python setup.py build_ext -q --inplace
 # Install numba locally for use in `numba -s` sys info tool at test time
 # `-iNOWHERE` make a fake index to avoid auto downloading dependency
 
-if [ `uname -m` = 'aarch64' ]; then 
-  rm /usr/bin/lsb_release
-fi
+#if [ `uname -m` = 'aarch64' ]; then 
+#  rm /usr/bin/lsb_release
+#fi
 
 python -m pip install -iNOWHERE -e .
