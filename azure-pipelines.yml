@@ -9,7 +9,6 @@ jobs:
 # Mac and Linux use the same template with different matrixes
 - template: buildscripts/azure/azure-linux-macos.yml
   parameters:
-    pool: 'Azure Pipelines'
     name: Linux
     vmImage: ubuntu-16.04
     matrix:
@@ -19,7 +18,7 @@ jobs:
         CONDA_ENV: travisci
         TEST_THREADING: 'tbb'
         TEST_START_INDEX: 2
-- template: buildscripts/azure/azure-linux-macos.yml
+- template: buildscripts/azure/azure-linux-aarch64.yml
   parameters:
     pool: AArch64_agent
     #arch: arm64
