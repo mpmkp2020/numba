@@ -14,7 +14,7 @@ python setup.py build_ext -q --inplace
 # `-iNOWHERE` make a fake index to avoid auto downloading dependency
 
 if [ `uname -m` = 'aarch64' ]; then 
-  sudo rm /usr/bin/lsb_release
+  rm /usr/bin/lsb_release
 fi
 
 python -m pip install -iNOWHERE -e .
