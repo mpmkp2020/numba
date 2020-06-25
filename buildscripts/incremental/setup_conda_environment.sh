@@ -3,7 +3,7 @@
 set -v -e
 
 if [ `uname -m` = 'aarch64' ]; then
-    sudo rm -rf $HOME/.condarc
+    rm -rf $HOME/.condarc
 fi
 
 # first configure conda to have more tolerance of network problems, these
