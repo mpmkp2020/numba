@@ -125,7 +125,6 @@ jobs:
         CONDA_ENV: travisci
         TEST_START_INDEX: 1
 
-
 - template: buildscripts/azure/azure-windows.yml
   parameters:
     name: Windows
