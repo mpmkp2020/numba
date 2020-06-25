@@ -44,10 +44,6 @@ conda remove --all -q -y -n $CONDA_ENV
 # guarding against the possibility that it does not exist in the environment.
 # Create a base env first and then add to it...
 
-if [ `uname -m` = 'aarch64' ]; then
-    NUMPY="1.17"
-fi
-
 conda create -n $CONDA_ENV -q -y ${EXTRA_CHANNELS} python=$PYTHON numpy=$NUMPY pip
 
 # Activate first
