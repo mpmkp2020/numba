@@ -18,24 +18,24 @@ jobs:
         if [ "$(uname)" == "Linux" ] && [[ "$CONDA_SUBDIR" == "linux-32" || "$BITS32" == "yes" ]]; then sudo apt-get install -y libc6-dev-i386; fi
         echo "Installing Miniconda"
         buildscripts/incremental/install_miniconda.sh
-        export PATH=$HOME/miniconda3/bin:$PATH
+        export PATH=$HOME/miniconda/bin:$PATH
         echo "Setting up Conda environment"
         buildscripts/incremental/setup_conda_environment.sh
       displayName: 'Before Install'
 
     - script: |
-        export PATH=$HOME/miniconda3/bin:$PATH
+        export PATH=$HOME/miniconda/bin:$PATH
         buildscripts/incremental/build.sh
       displayName: 'Build'
 
     - script: |
-        export PATH=$HOME/miniconda3/bin:$PATH
+        export PATH=$HOME/miniconda/bin:$PATH
         conda install -y flake8
         flake8 numba
       displayName: 'Flake8'
       condition: eq(variables['RUN_FLAKE8'], 'yes')
 
     - script: |
-        export PATH=$HOME/miniconda3/bin:$PATH
+        export PATH=$HOME/miniconda/bin:$PATH
         buildscripts/incremental/test.sh
       displayName: 'Test'
