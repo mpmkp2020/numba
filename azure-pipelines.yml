@@ -119,11 +119,6 @@ jobs:
         NUMPY: '1.17'
         CONDA_ENV: travisci
         TEST_START_INDEX: 0
-      AArch64_agent_02:
-        PYTHON: '3.8'
-        NUMPY: '1.17'
-        CONDA_ENV: travisci
-        TEST_START_INDEX: 1
 
 - template: buildscripts/azure/azure-windows.yml
   parameters:
