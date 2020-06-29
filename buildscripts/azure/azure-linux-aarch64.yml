@@ -14,6 +14,7 @@ jobs:
       ${{ insert }}: ${{ parameters.matrix }}
 
   steps:
+    - script: docker run --rm --privileged hypriot/qemu-register
     - script: |
         echo "Installing Miniconda"
         #buildscripts/incremental/install_miniconda.sh
