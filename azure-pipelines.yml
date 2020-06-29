@@ -112,7 +112,7 @@ jobs:
 - template: buildscripts/azure/azure-linux-aarch64.yml
   parameters:
     pool: AArch64_agent
-    vmImage: 'quay.io/pypa/manylinux2014_aarch64'
+    vmImage: 'multiarch/ubuntu-core:arm64-bionic'
     matrix:
       AArch64_agent_01:
         PYTHON: '3.8'
