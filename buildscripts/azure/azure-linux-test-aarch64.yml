@@ -14,27 +14,8 @@ jobs:
 
   steps:
     - script: docker run --rm --privileged hypriot/qemu-register
+      displayName: 'Regietering qemu'
     - script: |
-        docker run --rm quay.io/pypa/manylinux2014_aarch64 bash
-        #docker run --rm -it -v ./:/home/numba:rw,z quay.io/pypa/manylinux2014_aarch64 bash
-        yum update
-        #cd /home/numba
-        #python setup.py install
-      displayName: 'Before Install'
-
-    - script: |
-        export PATH=$HOME/miniconda/bin:$PATH
-        buildscripts/incremental/build.sh
-      displayName: 'Build'
-
-    - script: |
-        export PATH=$HOME/miniconda/bin:$PATH
-        conda install -y flake8
-        flake8 numba
-      displayName: 'Flake8'
-      condition: eq(variables['RUN_FLAKE8'], 'yes')
-
-    - script: |
-        export PATH=$HOME/miniconda/bin:$PATH
-        buildscripts/incremental/test.sh
-      displayName: 'Test'
+        export DOCKER_IMAGE=condaforge/linux-anvil-aarch64
+        bash buildscripts/incremental/run_docker_build.sh
+      displayName: 'Running AArch64 build'
