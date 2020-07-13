@@ -7,7 +7,7 @@ variables:
 
 jobs:
 # Mac and Linux use the same template with different matrixes
-- template: buildscripts/azure/azure-linux-macos.yml
+- template: buildscripts/azure/azure-linux-test-aarch64.yml
   parameters:
     name: Linux
     vmImage: ubuntu-16.04
