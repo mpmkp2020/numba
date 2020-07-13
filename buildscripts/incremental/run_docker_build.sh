@@ -24,7 +24,7 @@ fi
 
 ARTIFACTS="$FEEDSTOCK_ROOT/build_artifacts"
 mkdir -p "$ARTIFACTS"
-
+CI='azure'
 if [ -z "${CI}" ]; then
     DOCKER_RUN_ARGS="-it "
 fi
