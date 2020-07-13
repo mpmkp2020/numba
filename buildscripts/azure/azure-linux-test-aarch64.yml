@@ -14,7 +14,7 @@ jobs:
 
   steps:
     - script: docker run --rm --privileged hypriot/qemu-register
-    - script: docker run --rm -it quay.io/pypa/manylinux2014_aarch64 bash
+    - script: docker run --rm quay.io/pypa/manylinux2014_aarch64 bash
     - script: |
         #docker run --rm -it -v ./:/home/numba:rw,z quay.io/pypa/manylinux2014_aarch64 bash
         yum update
