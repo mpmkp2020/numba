@@ -13,6 +13,12 @@ jobs:
       ${{ insert }}: ${{ parameters.matrix }}
 
   steps:
+    - script: |
+        sudo apt-get remove qemu
+        sudo apt-get remove qemu-user
+        sudo apt-get remove qemu-user-static
+        sudo apt-get remove qemu-system-arm
+      displayName: 'Installing qemu libraries'
     - script: docker run --rm --privileged hypriot/qemu-register
       displayName: 'Regietering qemu'
     - script: |
