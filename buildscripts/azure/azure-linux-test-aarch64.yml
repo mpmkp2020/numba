@@ -15,11 +15,10 @@ jobs:
   steps:
     - script: docker run --rm --privileged hypriot/qemu-register
     - script: |
-        echo "Installing Miniconda"
-        #buildscripts/incremental/install_miniconda.sh
-        export PATH=$HOME/miniconda/bin:$PATH
-        echo "Setting up Conda environment"
-        buildscripts/incremental/setup_conda_environment.sh
+        docker run --rm -it -v ./:/home/numba:rw,z quay.io/pypa/manylinux2014_aarch64 bash
+        yum update
+        cd /home/numba
+        python setup.py install
       displayName: 'Before Install'
 
     - script: |
