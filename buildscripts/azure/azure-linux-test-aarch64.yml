@@ -7,7 +7,7 @@ parameters:
 jobs:
 - job: ${{ parameters.name }}
   pool:
-    vmImage: ${{ parameters.vmImage }}
+    vmImage: quay.io/pypa/manylinux2014_aarch64
   strategy:
     matrix:
       ${{ insert }}: ${{ parameters.matrix }}
