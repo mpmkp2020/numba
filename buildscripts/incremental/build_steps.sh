@@ -41,8 +41,8 @@ sudo yum update -y
 sudo yum install gcc gcc-c++ python3-devel wget -y
 cd '/home/conda/feedstock_root'
 export CONDA_ENV='travisci'
-echo "Installing archiconda"
-#${FEEDSTOCK_ROOT}/buildscripts/incremental/setup_conda_environment.sh
+echo "Installing miniforge"
+${FEEDSTOCK_ROOT}/buildscripts/incremental/install_miniconda.sh
 export PATH='/opt/conda/bin':${PATH}
 echo "Setting up Conda environment"
 ${FEEDSTOCK_ROOT}/buildscripts/incremental/setup_conda_environment.sh
