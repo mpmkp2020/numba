@@ -23,6 +23,7 @@ jobs:
     - script: docker run --rm --privileged hypriot/qemu-register:latest
       displayName: 'Regietering qemu'
     - script: |
-        export DOCKER_IMAGE=condaforge/linux-anvil-aarch64
+        #export DOCKER_IMAGE=condaforge/linux-anvil-aarch64
+        export DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
         bash buildscripts/incremental/run_docker_build.sh
       displayName: 'Running AArch64 build'
