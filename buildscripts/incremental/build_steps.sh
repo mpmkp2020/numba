@@ -37,8 +37,8 @@ CONDARC
 #fi
 
 #touch "${FEEDSTOCK_ROOT}/build_artifacts/conda-forge-build-done-${CONFIG}"
-sudo yum update -y
-sudo yum install gcc gcc-c++ python3-devel wget -y
+yum update -y
+yum install gcc gcc-c++ python3-devel wget -y
 cd '/home/conda/feedstock_root'
 export CONDA_ENV='travisci'
 echo "Installing miniforge"
