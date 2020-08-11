@@ -20,7 +20,7 @@ jobs:
         sudo apt-get install qemu-system-arm
         sudo apt-get install qemu
       displayName: 'Installing qemu libraries'
-    - script: docker run --rm --privileged hypriot/qemu-register
+    - script: docker run --rm --privileged multiarch/qemu-user-static:register --reset
       displayName: 'Regietering qemu'
     - script: |
         #export DOCKER_IMAGE=condaforge/linux-anvil-aarch64
