@@ -21,7 +21,7 @@ jobs:
 - template: buildscripts/azure/azure-linux-macos.yml
   parameters:
     pool: AArch64_agent
-    vmImage: 'quay.io/pypa/manylinux2014_aarch64'
+    vmImage: ubuntu-16.04
     matrix:
       AArch64_agent_01:
         PYTHON: '3.8'
