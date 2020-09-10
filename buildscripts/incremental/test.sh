@@ -60,6 +60,7 @@ if [[ "$archstr" == 'ppc64le' ]]; then
 fi
 
 # First check that the test discovery works
+cat /opt/conda/conda-bld/llvmdev_*/work/lib/ExecutionEngine/RuntimeDyld/RuntimeDyldELF.cpp
 python -m numba.tests.test_runtests
 
 # Now run tests based on the changes identified via git
