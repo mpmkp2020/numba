@@ -60,7 +60,6 @@ if [[ "$archstr" == 'ppc64le' ]]; then
 fi
 
 # First check that the test discovery works
-cat /opt/conda/conda-bld/llvmdev_*/work/lib/ExecutionEngine/RuntimeDyld/RuntimeDyldELF.cpp
 python -m numba.tests.test_runtests
 
 # Now run tests based on the changes identified via git
@@ -74,6 +73,8 @@ python -m numba.runtests -l
 # Note that coverage is run from the checkout dir to match the "source"
 # directive in .coveragerc
 echo "INFO: Running slice of discovered tests: ($TEST_START_INDEX,None,$TEST_COUNT)"
+cat /opt/conda/conda-bld/llvmdev*/work/lib/ExecutionEngine/RuntimeDyld/RuntimeDyldELF.cpp
+
 if [ "$RUN_COVERAGE" == "yes" ]; then
     export PYTHONPATH=.
     coverage erase
